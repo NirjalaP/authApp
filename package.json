@@ -15,5 +15,9 @@
     "url": "https://github.com/NirjalaP/authApp/issues"
   },
   "homepage": "https://github.com/NirjalaP/authApp#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express-session": "^1.18.1"
+  }
 }
