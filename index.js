@@ -38,3 +38,9 @@ constUserDetail = new Schema({
 
 UserDetail.plugin(passportLocalMongoose);
 const UserDetails = mongoose.model('userInfo', UserDetail, 'userInfo');
+
+// Passport local authentication
+passport.use(UserDetails.createStrategy());
+
+passport.serializeUser(UserDetails.serializeUser());
+passport.deserializeUser(UserDetails.deserializeUser());
