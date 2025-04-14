@@ -6,6 +6,16 @@ const mongoose = require('mongoose');
 const passportLocalMongoose = require('passport-local-mongoose');
 const connectEnsureLogin = require('connect-ensure-login');
 
+const expressSession = require('express-session')({
+    secret: 'secret',
+    resave: false,
+    saveUninitialized: true,
+    cookie:{
+        secure: false,
+        maxAge: 60000
+    }
+});
+
 app.use(express.static(__dirname));
 
 app.use(bodyParser.json());
